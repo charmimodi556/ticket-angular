@@ -1,0 +1,36 @@
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<h1 class="text-center">Ticket Booking</h1>
+
+<div class="container">
+<div class="container">
+    <div class="row col-md-7 col-md-offset-3 custyle">
+    <hr>
+    <table frame="box"  class="table table-striped custab">
+    <thead>
+        <tr>
+            <th class="text-center" [width]="100">Id</th>
+            <th class="text-center" [width]="100">Name</th>
+            <th class="text-center" [width]="100">Price</th>
+            <th class="text-center" [width]="100">Age</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of tickets">
+            <td class="text-center">{{ticket.id}}</td>
+            <td class="text-center"><span *ngIf="!ticket.canEditCode">{{ticket.name}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.name" type="text" class="form-control" /></td>
+            <td class="text-center"><span *ngIf="!ticket.canEditCode">{{ticket.price}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.price" type="text" class="form-control" /></td>
+            <td class="text-center"><span *ngIf="!ticket.canEditCode">{{ticket.age}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.age" type="text" class="form-control" /></td>
+            <td class="text-center"><button  style="margin-right: 10px" class="btn btn-danger btn-xs" (click)="deleteTicket(ticket.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+            <td><button *ngIf="!ticket.canEditCode" width="75%" style="margin-right: 10px" class="btn btn-success btn-xs" (click)="ticket.canEditCode = true"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+            <button *ngIf="ticket.canEditCode" class="btn btn-warning btn-xs" (click)="ticket.canEditCode = false;updateTicket(ticket)"><span class="glyphicon glyphicon-ok"></span> Done</button></td>  
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+
