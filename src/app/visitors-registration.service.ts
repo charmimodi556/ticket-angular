@@ -17,4 +17,8 @@ export class VisitorsRegistrationService {
     return this.http.get("http://localhost:8080/visitors/");
   }
 
+  public getTickets(){
+    return this.http.get("http://localhost:8080/ticket/");
+  }
+
 }
