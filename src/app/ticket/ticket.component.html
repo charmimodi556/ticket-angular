@@ -19,14 +19,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="price"><span class="req">* </span> Price : </label>
+                        <label for="Price"><span class="req">* </span> Price: <small>Price should be 200 Maximum</small> </label>
                         <input class="form-control" type="text" [(ngModel)]="ticket.price" name="price" id="price"
                             placeholder="Total price for the ticket" required />
                         <div id="errLast"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="salary"><span class="req">* </span> Age: </label>
+                        <label for="Age"><span class="req">* </span> Age: <small>Age should be between 1 to 100</small> </label>
                         <input class="form-control" required type="text" [(ngModel)]="ticket.age" name="age"
                             id="age" placeholder="Enter your age" />
                     </div>
