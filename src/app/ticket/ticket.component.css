@@ -1,11 +1,11 @@
 
 body {
-    padding-top:50px;
+    padding-top:30px;
 }
 fieldset {
     border: thin solid #ccc; 
     border-radius: 4px;
-    padding: 20px;
+    padding: 50px;
     padding-left: 40px;
     background: #fbfbfb;
 }

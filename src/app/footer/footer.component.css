@@ -1,11 +1,8 @@
-body{
-    margin: 0;
-  }
-  .footer {
-    position: fixed;
-    overflow: hidden;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-   }  
+div{
+  position:fixed; 
+  position:absolute;  
+  bottom:0; 
+  padding: 15px;
+  background-color: beige;
+  width: 1500px;
+}
