@@ -9,7 +9,7 @@ import { TicketRegistrationService } from '../ticket-registration.service';
 })
 export class TicketComponent implements OnInit {
 
-  ticket: Ticket = new Ticket("",0,0);
+  ticket: Ticket = new Ticket(0,"",0,0);
   message:any;
 
   constructor(private service: TicketRegistrationService) { }

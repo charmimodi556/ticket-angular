@@ -1,0 +1,57 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                 <div class="form-group">
+                       <label for="id"><span class="req">* </span> VID: <small>This will be your Visitor ID
+                                </small> </label>
+                         <input required type="text" [(ngModel)]="visitor.vid" name="vid" id="vid"
+                                 class="form-control phone" maxlength="28" placeholder="Enter your visitor id..." />
+                 </div>            
+
+
+                    <div class="form-group">
+                        <label for="vname"><span class="req">* </span> VName: <small>This will be your visitor name</small> </label>
+                        <input required type="text" [(ngModel)]="visitor.vname" name="vname" id="vname"
+                            class="form-control phone" maxlength="28" placeholder="Enter your visitorname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vage"><span class="req">* </span> VAge: <small>Age should be between 1 to 100</small> </label>
+                        <input class="form-control" required type="text" [(ngModel)]="visitor.vage" name="vage"
+                            id="vage" placeholder="Enter your age" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticket"><span class="req">* </span> Ticket_ID: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="visitor.ticket.id" name="ticket"
+                            id="ticket" placeholder="Enter your Ticket ID" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+
+            <div>
+                <h3>{{message}}</h3>
+            </div>
+
+        </div><!-- ends col-6 -->
+
+
+
+    </div>
+</div>
+

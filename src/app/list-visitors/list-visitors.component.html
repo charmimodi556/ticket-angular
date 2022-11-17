@@ -1,0 +1,32 @@
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<h1 class="text-center">Visitors List</h1>
+
+<div class="container">
+<div class="container">
+    <div class="row col-md-7 col-md-offset-3 custyle">
+    <hr>
+    <table style="width:100%" class="table table-striped custab">
+    <thead>
+        <tr >
+            <th class="text-center" [width]="100">Id</th>
+            <th class="text-center" [width]="100">Name</th>
+            <th class="text-center" [width]="100">Age</th>
+            <th class="text-center" [width]="100">Ticket</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let visitors of visitors">
+            <td class="text-center" [width]="100">{{visitors.vid}}</td>
+            <td class="text-center" [width]="100">{{visitors.vname}}</td>
+            <td class="text-center" [width]="100">{{visitors.vage}}</td>
+            <td class="text-center" [width]="100">{{visitors.ticket.name}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+

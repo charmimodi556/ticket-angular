@@ -10,6 +10,9 @@ import { TicketRegistrationService } from './ticket-registration.service';
 import { DeleteUpdateComponent } from './delete-update/delete-update.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { VisitorsComponent } from './visitors/visitors.component';
+import { VisitorsRegistrationService } from './visitors-registration.service';
+import { ListVisitorsComponent } from './list-visitors/list-visitors.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { FooterComponent } from './footer/footer.component';
     TicketComponent,
     DeleteUpdateComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VisitorsComponent,
+    ListVisitorsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [TicketRegistrationService],
+  providers: [TicketRegistrationService,VisitorsRegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
