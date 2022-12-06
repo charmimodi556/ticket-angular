@@ -5,12 +5,16 @@ body {
 fieldset {
     border: thin solid #ccc; 
     border-radius: 4px;
-    padding: 50px;
+    padding: 35px;
+    margin-top: 70px;
     padding-left: 40px;
     background: #fbfbfb;
 }
 legend {
    color: #678;
+}
+div{
+    position:unset !important;
 }
 .form-control {
     width: 95%;

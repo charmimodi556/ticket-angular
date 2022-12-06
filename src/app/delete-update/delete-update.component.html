@@ -12,20 +12,20 @@
     <table frame="box" style="width:100%" class="table table-striped custab">
     <thead>
         <tr >
-            <th class="text-center" [width]="100">Id</th>
-            <th class="text-center" [width]="100">Name</th>
-            <th class="text-center" [width]="100">Price</th>
-            <th class="text-center" [width]="100">Age</th>
-            <th class="text-center">Action</th>
+            <th class="text-center" [width]="107">Id</th>
+            <th class="text-center" [width]="107">Name</th>
+            <th class="text-center" [width]="107">Price</th>
+            <th class="text-center" [width]="107">Age</th>
+            <th class="text-center" [width]="180">Action</th>
         </tr>
     </thead>
     <tbody >
         <tr *ngFor="let ticket of tickets">
-            <td class="text-center" [width]="100">{{ticket.id}}</td>
-            <td class="text-center" [width]="100"><span *ngIf="!ticket.canEditCode">{{ticket.name}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.name" type="text" class="form-control" /></td>
-            <td class="text-center" [width]="100"><span *ngIf="!ticket.canEditCode">{{ticket.price}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.price" type="text" class="form-control" /></td>
-            <td class="text-center" [width]="100"><span *ngIf="!ticket.canEditCode">{{ticket.age}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.age" type="text" class="form-control" /></td>
-            <td class="text-center" [width]="100"><button  style="margin-right: 10px" class="btn btn-danger btn-xs" (click)="deleteTicket(ticket.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+            <td class="text-center" [width]="107">{{ticket.id}}</td>
+            <td class="text-center" [width]="107"><span *ngIf="!ticket.canEditCode">{{ticket.name}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.name" type="text" class="form-control" /></td>
+            <td class="text-center" [width]="107"><span *ngIf="!ticket.canEditCode">{{ticket.price}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.price" type="text" class="form-control" /></td>
+            <td class="text-center" [width]="107"><span *ngIf="!ticket.canEditCode">{{ticket.age}}</span><input *ngIf="ticket.canEditCode" [(ngModel)]="ticket.age" type="text" class="form-control" /></td>
+            <td class="text-center" [width]="107"><button  style="margin-right: 10px" class="btn btn-danger btn-xs" (click)="deleteTicket(ticket.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button>
             <td><button *ngIf="!ticket.canEditCode" width="75%" style="margin-right: 10px" class="btn btn-success btn-xs" (click)="ticket.canEditCode = true"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
             <button *ngIf="ticket.canEditCode" class="btn btn-warning btn-xs" (click)="ticket.canEditCode = false;updateTicket(ticket)"><span class="glyphicon glyphicon-ok"></span> Done</button></td>  
         </tr>

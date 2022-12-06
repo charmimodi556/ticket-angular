@@ -13,10 +13,6 @@ fieldset {
 div{
     position:unset !important;
 }
-
-legend {
-   color: #678;
-}
 .form-control {
     width: 90%;
 }
@@ -26,4 +22,12 @@ label small {
 span.req {
     color:maroon;
     font-size: 112%;
+}
+
+thead, tbody { display: block; }
+
+tbody {
+    height: 160px;      /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
 }

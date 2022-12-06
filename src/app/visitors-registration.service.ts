@@ -21,4 +21,8 @@ export class VisitorsRegistrationService {
     return this.http.get("http://localhost:8080/ticket/");
   }
 
+  public findVisitor(vname: string){
+    return this.http.get("http://localhost:8080/visitors/"+vname, {responseType: 'text' as 'json'});
+  }
+
 }

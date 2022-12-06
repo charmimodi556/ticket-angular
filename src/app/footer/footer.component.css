@@ -1,8 +1,13 @@
 div{
-  position:fixed; 
-  position:absolute;  
-  bottom:0; 
+  margin-inline-end: auto;    
+}
+
+h4{
+  background-color:beige; 
   padding: 15px;
-  background-color: beige;
-  width: 1500px;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }

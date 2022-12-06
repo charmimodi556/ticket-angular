@@ -1,0 +1,54 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                    <label for="vname"><span class="req">* </span> VName: <small>This will be your visitor name</small> </label>
+                    <input required type="text" [(ngModel)]="visitor.vname" name="vname" id="vname"
+                        class="form-control" maxlength="28" placeholder="Enter your visitorname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Submit" (click)="findVisitorDetail(visitor)">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h1 class="text-center">Visitor's Details</h1>
+
+<div class="container">
+    <div class="row col-md-7 col-md-offset-3 custyle">
+    <hr>
+    <table style="width:100%" class="table table-striped custab">
+    <thead>
+        <tr >
+            <th class="text-center" [width]="300">VId</th>
+            <th class="text-center" [width]="300">VName</th>
+            <th class="text-center" [width]="300">VAge</th>
+            <th class="text-center" [width]="300">TicketName</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr>
+            <td class="text-center" [width]="300">{{visitors.vid}}</td>
+            <td class="text-center" [width]="300">{{visitors.vname}}</td>
+            <td class="text-center" [width]="300">{{visitors.vage}}</td>
+            <td class="text-center" [width]="300">{{visitors.ticket.name}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>

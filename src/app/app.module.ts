@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { VisitorsComponent } from './visitors/visitors.component';
 import { VisitorsRegistrationService } from './visitors-registration.service';
 import { ListVisitorsComponent } from './list-visitors/list-visitors.component';
+import { FindVisitorComponent } from './find-visitor/find-visitor.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListVisitorsComponent } from './list-visitors/list-visitors.component';
     HeaderComponent,
     FooterComponent,
     VisitorsComponent,
-    ListVisitorsComponent
+    ListVisitorsComponent,
+    FindVisitorComponent
   ],
   imports: [
     BrowserModule,
